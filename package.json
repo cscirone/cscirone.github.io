@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/cscirone/cscirone.github.io/issues"
   },
-  "homepage": "https://github.com/cscirone/cscirone.github.io#readme",
+  "homepage": "https://github.com/cscirone/cscirone.github.io",
   "dependencies": {
     "less": "^4.2.2"
   }
