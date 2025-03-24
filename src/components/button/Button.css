@@ -1,0 +1,41 @@
+:root {
+    --button-transition: all 120ms ease-in-out;
+    --button-border-radius: 2rem;
+    --button-padding: 0.5rem 1rem;
+    
+    --button-primary-bg: theme('colors.purple.800');
+    --button-primary-bg-hover: theme('colors.purple.700');
+
+    --button-outline-bg: transparent;
+    --button-outline-bg-hover: transparent;
+
+    --button-outline-border: 1px solid theme('colors.neutral.200');
+    --button-outline-border-hover: 1px solid theme('colors.neutral.900');
+}
+
+.button {
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+    transition: var(--button-transition);
+}
+
+.button-primary {
+    background-color: var(--button-primary-bg);
+    color: white;
+    
+
+    &:hover {
+        background-color: var(--button-primary-bg-hover);
+    }
+}
+
+.button-outline {
+    background-color: transparent;
+    border: var(--button-outline-border);
+    color: black;
+
+    &:hover {
+        background-color: var(--button-outline-bg-hover);
+        border: var(--button-outline-border-hover);
+    }
+}
