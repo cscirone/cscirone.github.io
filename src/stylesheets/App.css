@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
+:root {
+  --background-color: theme('colors.zinc.100');
+
+  --foreground-color: theme('colors.neutral.950');
+  --foreground-color-dark: #ffffff;
+
+  --primary-color: theme('colors.purple.800');
+  --primary-color-hover: theme('colors.purple.700');
+
+  --secondary-color: theme('colors.emerald.600');
+  --secondary-color-hover: theme('colors.emerald.700');
+
+  --tertiary-color: theme('colors.neutral.950');
+  --tertiary-color-hover: theme('colors.neutral.800');
+
+  --border-color: theme('colors.neutral.300');
+  --border-color-hover: theme('colors.neutral.900');
+
+  --base-font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  background-color: var(--background-color);
+  font-size: 16px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  h1 {
+    font-size: 2rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h2 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+  }
+
+  a {
+    color: theme('colors.blue.500');
+    
+    &:visited {
+          color: theme('colors.purple.600');
+    }
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -4,8 +4,24 @@
     gap: .5rem;
     color: black;
     transition: all 120ms ease-in-out;
+    height: fit-content;
+    padding: .35rem 0;
+    color: var(--foreground-color);
 
     &:hover, &.active {
         box-shadow: 0px 4px 0px 0 theme('colors.purple.800');
+    }
+}
+
+a.tab {
+    color: var(--foreground-color);
+    text-decoration: none;
+
+    &:visited {
+        color: var(--foreground-color);
+    }
+
+    &:hover {
+        text-decoration: none;
     }
 }

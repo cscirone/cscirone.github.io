@@ -1,5 +1,6 @@
 import './stylesheets/App.css';
 import './stylesheets/Tab.css';
+import './stylesheets/Card.css';
 
 import { useState, useEffect } from 'react';
 
@@ -30,11 +31,11 @@ function AppContent() {
     <>
       <Navbar activeTab={activeTab} />
 
-      <div className="flex flex-col gap-2 p-10 bg-neutral-50">
+      <div className="flex flex-col gap-6 p-10 flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/test" element={<TestPage />} />
-          <Route path="/career-history" element={<TestPage />} />
+          <Route path="/career" element={<TestPage />} />
         </Routes>
       </div>
     </>
