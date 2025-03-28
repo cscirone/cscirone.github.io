@@ -45,6 +45,12 @@
     }
 }
 
-.button-flashy {
-    
+a.button {
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: inherit;
+    }
 }

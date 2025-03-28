@@ -13,7 +13,7 @@ function Navbar({ activeTab }) {
                     <Link to="/" className={`tab ${activeTab === 'home' ? 'active' : ''}`}>About</Link>
                     <Link to="/career" className={`tab ${activeTab === 'career' ? 'active' : ''}`}>Career</Link>
                     <Link to="/recommendations" className={`tab ${activeTab === 'recommendations' ? 'active' : ''}`}>Recommendations</Link>
-                    <Link to="/test" className={`tab ${activeTab === 'test' ? 'active' : ''}`}>Test</Link>
+                    <Link to="/bits&bobs" className={`tab ${activeTab === 'bits&bobs' ? 'active' : ''}`}>Bits & Bobs</Link>
                 </TabContainer> 
             </nav>
         </>

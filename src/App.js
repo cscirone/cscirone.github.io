@@ -34,8 +34,11 @@ function AppContent() {
       <div className="flex flex-col gap-6 p-10 flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<TestPage />} />
           <Route path="/career" element={<TestPage />} />
+          <Route path="/recommendations" element={<TestPage />} />
+          <Route path="/bits&bobs" element={<TestPage />} />
+          <Route path="/contact" element={<TestPage />} />
+          <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </div>
     </>
