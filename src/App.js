@@ -1,55 +1,74 @@
 import './stylesheets/App.css';
-import './stylesheets/Tab.css';
-import './stylesheets/Card.css';
 
 import { useState, useEffect } from 'react';
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+
 import TestPage from './pages/TestPage';
 import Home from './pages/Home';
 
-import Navbar from './components/navbar/Navbar';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-library.add(fas, fab, far)
+//import Navbar from './components/navbar/Navbar';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import DrawerAppBar from './components/drawerAppBar/DrawerAppBar';
+
+
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#6b21a8',
+    },
+    secondary: {
+      main: '#059669',
+    },
+    background: {
+      default: '#f4f4f5',
+    },
+    success: {
+      main: '#22c55e',
+    },
+  },
+});
+
 
 function AppContent() {
   const location = useLocation();
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('about');
 
   useEffect(() => {
     // Get the path without the leading slash and set it as the active tab
-    const path = location.pathname.slice(1) || 'home';
+    const path = location.pathname.slice(1) || 'about';
     setActiveTab(path);
   }, [location]);
 
   return (
-    <>
-      <Navbar activeTab={activeTab} />
+    <div className="flex flex-col">
+      {/*<Navbar activeTab={activeTab} />*/}
+      <DrawerAppBar />
 
-      <div className="flex flex-col gap-6 p-10 flex-1">
+      <main className="px-4 py-2 sm:px-10 sm:py-4">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<Home />} />
           <Route path="/career" element={<TestPage />} />
           <Route path="/recommendations" element={<TestPage />} />
-          <Route path="/bits&bobs" element={<TestPage />} />
+          <Route path="/bits-and-bobs" element={<TestPage />} />
           <Route path="/contact" element={<TestPage />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

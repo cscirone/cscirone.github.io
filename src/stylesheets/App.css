@@ -2,64 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-color: theme('colors.zinc.100');
-
-  --foreground-color: theme('colors.neutral.950');
-  --foreground-color-dark: #ffffff;
-
-  --primary-color: theme('colors.purple.800');
-  --primary-color-hover: theme('colors.purple.700');
-
-  --secondary-color: theme('colors.emerald.600');
-  --secondary-color-hover: theme('colors.emerald.700');
-
-  --tertiary-color: theme('colors.neutral.950');
-  --tertiary-color-hover: theme('colors.neutral.800');
-
-  --border-color: theme('colors.neutral.300');
-  --border-color-hover: theme('colors.neutral.900');
-
-  --base-font-size: 16px;
-}
-
 body {
-  background-color: var(--background-color);
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.571rem + 0.476vw, 1rem) !important;
+
+  .nav-link {
+    display: flex;
+    flex: 1 1 0;
+    text-decoration: none;
+
+    button {
+      flex: 1 1 0;
+    }
+  }
+
+  .professional-photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    object-fit: cover;
+  }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
   h5 {
-    font-size: 0.875rem;
+    font-size: 0.875em;
   }
 
   h6 {
-    font-size: 0.75rem;
-  }
-
-  a {
-    color: theme('colors.blue.500');
-    
-    &:visited {
-          color: theme('colors.purple.600');
-    }
-    
-    &:hover {
-      text-decoration: underline;
-    }
+    font-size: 0.75em;
   }
 }
