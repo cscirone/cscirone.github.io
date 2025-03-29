@@ -1,9 +1,11 @@
-import FrontendSkills from '../components/Skills/FrontendSkills';
-import BackendSkills from '../components/Skills/BackendSkills';
-import ProfessionalSkills from '../components/Skills/ProfessionalSkills';
-import UniversityPrograms from '../components/Skills/UniversityPrograms';
-import VideoGames from '../components/Skills/VideoGames';
-import Sports from '../components/Skills/Sports';
+import { 
+    FrontendSkills, 
+    BackendSkills, 
+    ProfessionalSkills, 
+    UniversityPrograms, 
+    VideoGames, 
+    Sports 
+} from '../components/tabcard/tabcards';
 
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -60,7 +62,9 @@ function Home() {
 
             <div className="card">
                 <div className="flex gap-6 flex-wrap justify-center mr-auto">
-                    <img src="/assets/svg/nmsu_logo.svg" className="object-contain bg-[#8c0b42] rounded-full bg-origin-padding pt-3 pl-1 w-24 h-24" />
+                    <a href="https://www.nmsu.edu/" target="_blank" rel="noopener noreferrer" className="hover:scale-[1.05] transition-all duration-[120ms]">
+                        <img src="/assets/svg/nmsu_logo.svg" className="object-contain bg-[#8c0b42] rounded-full bg-origin-padding pt-3 pl-1 w-24 h-24" />
+                    </a>
 
                     <div className="flex flex-col">
                         <h3>Bachelor of Science - Computer Science, Minor in Mathematics</h3>
