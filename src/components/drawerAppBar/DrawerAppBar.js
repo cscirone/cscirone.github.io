@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [
-  { name: 'About', path: '/about' },
+  { name: 'About', path: '/' },
   { name: 'Career', path: '/career' },
   { name: 'Recommendations', path: '/recommendations' },
   { name: 'Bits & Bobs', path: '/bits-and-bobs' }

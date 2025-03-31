@@ -1,7 +1,11 @@
+import JdoodleEmbed from '../components/jDoodleEmbed/JdoodleEmbed';
+
 function TestPage() {
     return (
-        <div className="">
+        <div className="flex flex-col gap-4">
             <title>Test Page</title>
+
+            hello
         </div>
     );
 }

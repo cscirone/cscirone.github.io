@@ -36,6 +36,8 @@ body {
 
   h4 {
     font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   h5 {
@@ -44,5 +46,19 @@ body {
 
   h6 {
     font-size: 0.75em;
+  }
+
+  a {
+    color: theme('colors.blue.500');
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    a {
+      color: inherit;
+    }
   }
 }

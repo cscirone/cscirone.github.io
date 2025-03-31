@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 
 import TestPage from './pages/TestPage';
 import Home from './pages/Home';
+import Career from './pages/Career';
+import Recommendations from './pages/Recommendations';
+import Contact from './pages/Contact';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -48,13 +51,13 @@ function AppContent() {
       {/*<Navbar activeTab={activeTab} />*/}
       <DrawerAppBar />
 
-      <main className="px-4 py-2 sm:px-10 sm:py-4">
+      <main className="px-4 py-2 sm:px-10 sm:py-4 flex flex-col gap-4">
         <Routes>
-          <Route path="/about" element={<Home />} />
-          <Route path="/career" element={<TestPage />} />
-          <Route path="/recommendations" element={<TestPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/bits-and-bobs" element={<TestPage />} />
-          <Route path="/contact" element={<TestPage />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </main>
