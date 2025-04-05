@@ -1,4 +1,5 @@
 import TabPanelContent from "../TabPanelContent";
+import ImagePreview from "../../imagePreview/ImagePreview";
 
 function VGCoachingTabPanel() {
     return (
@@ -11,10 +12,10 @@ function VGCoachingTabPanel() {
                 Coaching is a very rewarding experience, and it gives me a more casual environment to hone my leadership skills in.
             </p>
 
-            <img 
+            <ImagePreview 
                 src={process.env.PUBLIC_URL + '/assets/images/nemesis_logo.png'} 
                 alt="Nemesis Logo"
-                className=""
+                thumbnailClassName="w-48 mx-auto"
             />
         </TabPanelContent>
     );

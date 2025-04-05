@@ -16,7 +16,7 @@ function ImageList({ images = [], className = "" }) {
 
     const inSmallScreen = useMediaQuery('(max-width: 600px)');
     return (
-        <div className={`flex p-4 ${className}`}>
+        <div className={`flex p-4 w-2/3 mx-auto ${className}`}>
             <MuiImageList variant="masonry" cols={inSmallScreen ? 2 : 3} gap={10}>
                 {images?.map((image, index) => (
                     <ImageListItem key={index}>

@@ -1,4 +1,5 @@
 import TabPanelContent from "../TabPanelContent";
+import ImagePreview from "../../imagePreview/ImagePreview";
 
 function GeologyTabPanel() {
     return (
@@ -13,17 +14,19 @@ function GeologyTabPanel() {
                 It was a great way to see mineral formations in the wild.
             </p>
 
-            <img 
-                src={process.env.PUBLIC_URL + '/assets/images/geology_hike_2.jpg'} 
-                alt="NMSU Geology"
-                className=""
-            />
+            <div className="flex flex-wrap gap-2 mx-auto">
+                <ImagePreview 
+                    src={process.env.PUBLIC_URL + '/assets/images/geology_hike_2.jpg'} 
+                    alt="NMSU Geology"
+                    thumbnailClassName="w-48"
+                />
 
-            <img 
-                src={process.env.PUBLIC_URL + '/assets/images/geology_hike.jpg'} 
-                alt="NMSU Geology"
-                className=""
-            />
+                <ImagePreview 
+                    src={process.env.PUBLIC_URL + '/assets/images/geology_hike.jpg'} 
+                    alt="NMSU Geology"
+                    thumbnailClassName="w-48"
+                />
+            </div>
 
         </TabPanelContent>
     );

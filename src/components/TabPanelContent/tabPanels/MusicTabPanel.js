@@ -1,7 +1,46 @@
+import { Select, MenuItem } from "@mui/material";
 import TabPanelContent from "../TabPanelContent";
+import SpotifyIFrame from "../../spotifyIframe/SpotifyIFrame";
+import { useState } from "react";
 
 function MusicTabPanel() {
+
+    const recommendations = [
+        {
+            title: "Vaporwave",
+            src: "https://open.spotify.com/embed/track/0PloVtYbZXVD6U7VR6tsBv?utm_source=generator&theme=0",
+        },
+        {
+            title: "Future Funk",
+            src: "https://open.spotify.com/embed/track/2FDJTo05zVmswy9x1FjlAa?utm_source=generator&theme=0",
+        },
+        {
+            title: "Country",
+            src: "https://open.spotify.com/embed/track/2PyJAiQjp1OPkow2FJZKHR?utm_source=generator&theme=0",
+        },
+        {
+            title: "Swing",
+            src: "https://open.spotify.com/embed/track/3TOGVJQaCQPE4J3JiSncwG?utm_source=generator&theme=0",
+        },
+        {
+            title: "Trance",
+            src: "https://open.spotify.com/embed/track/6bY3LFFbR70Cpt8cvvIhQb?utm_source=generator&theme=0",
+        },
+        {
+            title: "Dubstep",
+            src: "https://open.spotify.com/embed/track/1jiczAUjgZ9MF6TsYJFAxx?utm_source=generator&theme=0",
+        },
+        {
+            title: "Electro-swing",
+            src: "https://open.spotify.com/embed/track/0thLhIqWsqqycEqFONOyhu?utm_source=generator&theme=0",
+        }
+    ];
+
+
+    const [selectedRecommendation, setSelectedRecommendation] = useState(recommendations[0]);
+
     return (
+
         <TabPanelContent>
             <p>
                 Music has always been a large part of my life.
@@ -16,9 +55,24 @@ function MusicTabPanel() {
                 I chose to do mine on my favorite genre at the time, Vaporwave.
                 I will never forget this class, as it expanded the genres of music that I listen to and enjoy to this day.
                 I am now an avid listener of many genres of music, whether that be Rock, Jazz, Country, Electronic, Swing, Hip-Hop, Acapella, and more.
+                Check out some recommendations below!
             </p>
 
-            <iframe src="https://open.spotify.com/embed/track/0PloVtYbZXVD6U7VR6tsBv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
+            <Select
+                value={selectedRecommendation.title}
+                onChange={(e) => {
+                    const selected = recommendations.find(rec => rec.title === e.target.value);
+                    setSelectedRecommendation(selected);
+                }}
+            >
+                {recommendations.map((recommendation) => (
+                    <MenuItem key={recommendation.title} value={recommendation.title}>
+                        {recommendation.title}
+                    </MenuItem>
+                ))}
+            </Select>
+
+            <SpotifyIFrame src={selectedRecommendation.src} />       
         </TabPanelContent>
     );
 }
