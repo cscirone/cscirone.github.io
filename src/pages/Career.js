@@ -6,6 +6,7 @@ import Card from '../components/card/Card';
 function Career() {
     return (
         <>
+            <title>Career History</title>
             <h1>Career</h1>
 
             <h2>Professional Experience</h2>
@@ -203,6 +204,12 @@ function Career() {
                 </div>
 
                 <p>
+                    The CTiK-12 program at NMSU was a community outreach program where student Dissect Fellows worked with teachers at local high schools. 
+                    The goal of the program was to integrate Computational Thinking concepts and skills into the curriculum of whatever class the Fellow was assigned to. 
+                    This included both STEM and non-STEM classes. 
+                    Fellows were to help spread awareness and spark interest in Computer Science at Las Cruces high schools while collecting data to assist in bettering our efforts and to monitor our efficacy. 
+                    I was assigned to an English class where I developed a long term activity using Ozobots, small programmable robots. The Ozobots were used to represent the actions of characters in a novel that the class was reading. 
+                    Alongside literary analysis, students were taught how to program the robots, the basics of algorithms, abstraction, and programming principles.
                 </p>
 
                 <div className="flex flex-wrap gap-1">
@@ -212,6 +219,7 @@ function Career() {
                     <Chip label="Community Outreach" />
                     <Chip label="K-12 Education" />
                     <Chip label="Lesson Planning" />
+                    <Chip label="English" />
                 </div>
 
                 <a href="https://www.nmsu.edu/" target="_blank" rel="noopener noreferrer" className="self-end">
@@ -242,6 +250,12 @@ function Career() {
                 </div>
 
                 <p>
+                    As a Sales Intern at Konica Minolta, I was responsible for the reorganization of the local branch's customer database. 
+                    My goal was to remove duplicate records and to remove businesses that were no longer in business. 
+                    Without proper access to their database, I had to export the database as a .csv file and write a Java program to spit out a list of duplicate entries. 
+                    This was done utilizing a String distance algorithm. 
+                    To find out of business entries, extensive LinkedIn and business record research had to be done. 
+                    Once all of the aforementioned records were gathered, they were compiled into a spreadsheet and given to management for processing.
                 </p>
 
                 <div className="flex flex-wrap gap-1">

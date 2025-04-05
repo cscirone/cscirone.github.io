@@ -21,14 +21,10 @@ const navItems = [
   { name: 'About', path: '/' },
   { name: 'Career', path: '/career' },
   { name: 'Recommendations', path: '/recommendations' },
-  { name: 'Bits & Bobs', path: '/bits-and-bobs' }
+  { name: 'Contact', path: '/contact' }
 ];
 const drawerItems = [
   ...navItems,
-  {
-    name: 'Contact',
-    path: '/contact'
-  }
 ];
 const title = 'Christopher Scirone';
 
@@ -40,8 +36,15 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleLinkClick = () => {
+    global.window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (mobileOpen) {
+      handleDrawerToggle();
+    }
+  };
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         {title}
       </Typography>
@@ -51,7 +54,7 @@ function DrawerAppBar(props) {
       <List>
         {drawerItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <Link to={item.path} key={item.name} className="nav-link">
+            <Link to={item.path} key={item.name} className="nav-link" onClick={handleLinkClick}>
                 <Button sx={{ color: 'text.primary' }}>
                   {item.name}
                 </Button>
@@ -68,14 +71,12 @@ function DrawerAppBar(props) {
     <>
       <CssBaseline />
       <AppBar component="nav" position="sticky">
-        <Toolbar sx={{ flexDirection: { xs: 'row', sm: 'column'} }}>
-
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1 }} >
-            {title}
-          </Typography>
+        <Toolbar sx={{ flexDirection: { xs: 'row', sm: 'column'} }} className="justify-between">
+          <h1 className="nav-title">
+            <Link to="/" onClick={handleLinkClick} className="text-nowrap truncate">
+              Christopher Scirone
+            </Link>
+          </h1>
 
           <IconButton
             color="inherit"
@@ -89,7 +90,7 @@ function DrawerAppBar(props) {
 
           <Stack direction="row" spacing={2} sx={{ display: { xs: 'none', sm: 'flex' }}}>
             {navItems.map((item) => (
-              <Link to={item.path} key={item.name}>
+              <Link to={item.path} key={item.name} onClick={handleLinkClick}>
                 <Button sx={{ color: '#fff' }}>
                   {item.name}
                 </Button>

@@ -1,7 +1,7 @@
 import './stylesheets/App.css';
 
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 
 import TestPage from './pages/TestPage';
 import Home from './pages/Home';
@@ -12,8 +12,6 @@ import Contact from './pages/Contact';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 //import Navbar from './components/navbar/Navbar';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
 import DrawerAppBar from './components/drawerAppBar/DrawerAppBar';
 
 
@@ -68,9 +66,9 @@ function AppContent() {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <AppContent />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }

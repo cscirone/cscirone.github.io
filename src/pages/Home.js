@@ -6,14 +6,7 @@ import { Link } from 'react-router-dom';
 import ScrollableTabs from '../components/ScrollableTabs/ScrollableTabs';
 import Card from '../components/card/Card';
 
-
-import HTMLTabPanel from '../components/TabPanelContent/tabPanels/HTMLTabPanel';
-import CSSTabPanel from '../components/TabPanelContent/tabPanels/CSSTabPanel';
-import JavaScriptTabPanel from '../components/TabPanelContent/tabPanels/JavaScriptTabPanel';
-import ReactTabPanel from '../components/TabPanelContent/tabPanels/ReactTabPanel';
-import PrototypingTabPanel from '../components/TabPanelContent/tabPanels/PrototypingTabPanel';
-import DesignSystemsTabPanel from '../components/TabPanelContent/tabPanels/DesignSystemsTabPanel';
-import UserResearchTabPanel from '../components/TabPanelContent/tabPanels/UserResearchTabPanel';
+import TabPanels from '../components/TabPanelContent/TabPanels';
 
 function Home() {
     return (
@@ -54,10 +47,10 @@ function Home() {
                 </p>
                 <p className="text-pretty">
                     My previous role was at StrongMind, a leading online education company that provides personalized and adaptive learning solutions for K-12 students.
-                     At StrongMind, I shared the vision of transforming education through technology and empowering students to achieve their full potential.
-                     In my role I served as the primary designer for key AI-driven curriculum development tools, including Course Builder and Prompt Studio, which enhanced AI-human collaboration in course creation.
-                     I also maintained and refined a Storybook.js Design System to ensure consistency across StrongMind’s products. 
-                     My role involved close collaboration with multiple development teams, utilizing AI tools to accelerate development, mentoring designers in frontend technologies, prototyping new features, writing user flows, and working closely with product managers to meet the goals/expectations of StrongMind and its clients.
+                    At StrongMind, I shared the vision of transforming education through technology and empowering students to achieve their full potential.
+                    In my role I served as the primary designer for key AI-driven curriculum development tools, including Course Builder and Prompt Studio, which enhanced AI-human collaboration in course creation.
+                    I also maintained and refined a Storybook.js Design System to ensure consistency across StrongMind’s products. 
+                    My role involved close collaboration with multiple development teams, utilizing AI tools to accelerate development, mentoring designers in frontend technologies, prototyping new features, writing user flows, and working closely with product managers to meet the goals/expectations of StrongMind and its clients.
                 </p>
                 <p className="text-pretty">
                     In my former role from General Motors, I leveraged my skills in Java, JavaScript, and Adobe Experience Manager to create, maintain, and document web components and forms components for various General Motors brand sites globally. I was also responsible for onboarding and localizing site components to global markets, ensuring that the web experiences are culturally relevant and user-friendly. Additionally, I was a founding member of the Forms 2.0 project, which utilized Adobe Experience Manager Forms to replace our previous JSON-based forms solution. This project significantly reduced the time and work required to author, publish, and deploy new and existing forms to the live site, as well as the amount of off-cycle deployment requests. As a result, we improved the efficiency, quality, and security of our web applications and forms, as well as maintained or increased lead generation for dealerships around the world.
@@ -79,22 +72,22 @@ function Home() {
                     {
                         label: 'HTML',
                         index: 0,
-                        panel: <HTMLTabPanel />
+                        panel: <TabPanels.HTMLTabPanel />
                     },
                     {
                         label: 'CSS',
                         index: 1,
-                        panel: <CSSTabPanel />
+                        panel: <TabPanels.CSSTabPanel />
                     },
                     {
                         label: 'JavaScript',
                         index: 2,
-                        panel: <JavaScriptTabPanel />
+                        panel: <TabPanels.JavaScriptTabPanel />
                     },
                     {
                         label: 'React',
                         index: 3,
-                        panel: <ReactTabPanel />
+                        panel: <TabPanels.ReactTabPanel />
                     },
                 ]} name="frontend-skills" />
             </Card>
@@ -105,17 +98,17 @@ function Home() {
                     {
                         label: 'Prototyping',
                         index: 0,
-                        panel: <PrototypingTabPanel />
+                        panel: <TabPanels.PrototypingTabPanel />
                     },
                     {
                         label: 'Design Systems',
                         index: 1,
-                        panel: <DesignSystemsTabPanel />
+                        panel: <TabPanels.DesignSystemsTabPanel />
                     },
                     {
                         label: 'User Research',
                         index: 2,
-                        panel: <UserResearchTabPanel />
+                        panel: <TabPanels.UserResearchTabPanel />
                     }
                 ]} name="frontend-skills" />
             </Card>
@@ -126,23 +119,28 @@ function Home() {
                     {
                         label: 'Java',
                         index: 0,
-                        panel: <div>Java content</div>
+                        panel: <TabPanels.JavaTabPanel />
                     },
                     {
                         label: 'Ruby on Rails',
                         index: 1,
-                        panel: <div>Ruby on Rails content</div>
+                        panel: <TabPanels.RubyOnRailsTabPanel />
                     },
                     {
                         label: 'C, C++, C#',
                         index: 2,
-                        panel: <div>C, C++, C# content</div>
+                        panel: <TabPanels.CTabPanel />
                     },
                     {
                         label: 'AEM',
                         index: 3,
-                        panel: <div>AEM content</div>
+                        panel: <TabPanels.AEMTabPanel />
                     },
+                    {
+                        label: 'Deployment',
+                        index: 4,
+                        panel: <TabPanels.DeploymentTabPanel />
+                    }
                 ]} name="backend-skills" />
             </Card>
 
@@ -152,22 +150,22 @@ function Home() {
                     {
                         label: 'Leadership',
                         index: 0,
-                        panel: <div>Leadership content</div>
+                        panel: <TabPanels.LeadershipTabPanel />
                     },
                     {
                         label: 'Collaboration',
                         index: 1,
-                        panel: <div>Collaboration content</div>
+                        panel: <TabPanels.CollaborationTabPanel />
                     },
                     {
                         label: 'Agile',
                         index: 2,
-                        panel: <div>Agile content</div>
+                        panel: <TabPanels.AgileTabPanel />
                     },
                     {
                         label: 'Project Management',
                         index: 3,
-                        panel: <div>Project Management content</div>
+                        panel: <TabPanels.ProjectManagementTabPanel />
                     },
                 ]} name="professional-skills" />
             </Card>
@@ -207,17 +205,17 @@ function Home() {
                     {
                         label: 'Google igniteCS',
                         index: 0,
-                        panel: <div>Google igniteCS content</div>
+                        panel: <TabPanels.IgniteCSTabPanel />
                     },
                     {
                         label: 'CTiK-12',
                         index: 1,
-                        panel: <div>CTiK-12 content</div>
+                        panel: <TabPanels.Ctik12TabPanel />
                     },
                     {
                         label: 'PLA',
                         index: 2,
-                        panel: <div>PLA content</div>
+                        panel: <TabPanels.PLATabPanel />
                     }
                 ]} name="university-programs" />
             </Card>
@@ -228,46 +226,22 @@ function Home() {
                     {
                         label: 'Psychology',
                         index: 0,
-                        panel: <div>Computational Thinking, General Psychology</div>
+                        panel: <TabPanels.PsychologyTabPanel />
                     },
                     {
                         label: 'Geology',
                         index: 1,
-                        panel: 
-                        
-                            <div className="flex flex-col gap-4">
-                                <p>
-                                    Ever since I was a small child, I had a fascination with rocks and minerals.
-                                     I used to go out in the desert and pick up "lava rocks" and petrified wood.
-                                     I'd take them home and polish them with a tumbler and display them on the shelf.
-                                     So when given the opportunity to take a geology class in university, I eagerly took it.
-                                     We learned about mineral classifications, tectonic plates, and the practical applications of geology in the job market.
-                                     My favorite part of the class were the field excursions, where we got to go out to local geologic formations, such as the Organ Mountains and a local caldera off of I-25.
-                                     It was a great way to see mineral formations in the wild.
-                                </p>
-
-                                <img 
-                                    src={process.env.PUBLIC_URL + '/assets/images/geology_hike_2.jpg'} 
-                                    alt="NMSU Geology"
-                                    className=""
-                                />
-
-                                <img 
-                                    src={process.env.PUBLIC_URL + '/assets/images/geology_hike.jpg'} 
-                                    alt="NMSU Geology"
-                                    className=""
-                                />
-                            </div>
+                        panel: <TabPanels.GeologyTabPanel />
                     },
                     {
                         label: 'Music',
                         index: 2,
-                        panel: <div>Music History content</div>
+                        panel: <TabPanels.MusicTabPanel />
                     },
                     {
                         label: 'Brewing Science',
                         index: 3,
-                        panel: <div>Brewing Science content</div>
+                        panel: <TabPanels.BeerTabPanel />
                     }
                 ]} name="elective-interests" />
             </Card>
@@ -278,54 +252,12 @@ function Home() {
                     {
                         label: 'Esports',
                         index: 0,
-                        panel: 
-                            <div className="flex flex-wrap gap-4">
-                                <p>
-                                    The year is 2016, and a video game called <i><strong>Overwatch</strong></i> is released.
-                                     I was a casual player of <i><strong>Overwatch</strong></i>, playing with my friends and my brother in my free time.
-                                     After playing the game for a few months, I heard about a budding esports club at NMSU, and I went to the first meeting.
-                                     I was able to make the team, and we were able to compete in a number of events, including the collegiate league known as <i><strong>Tespa</strong></i>.
-                                     I played Utility Support for the team, mainly playing <i><strong>Zenyatta</strong></i>, <i><strong>Ana</strong></i>, and <i><strong>Brigitte</strong></i>.
-                                     We performed very well in the Tespa Collegiate Series for an orgnization without extensive University support.
-                                </p>
-                                <img 
-                                    src={process.env.PUBLIC_URL + '/assets/images/NMSUow_Teams.jpg'} 
-                                    alt="NMSU 2016 Overwatch Teams"
-                                    className="w-128"
-                                />
-                                <p>
-                                    My time on the team was an amazing experience, and I was able to make lifelong friends.
-                                     Shortly after I left the team, the University decided to make the esports club an official program.
-                                     They were able to get a new computer lab on campus, and were given a budget to purchase equipment and attend events.
-                                     I was an unofficial advisor for the organization for a time after my graduation, and I am proud to see what the organization has become.
-                                </p>
-
-                                <a href="https://esports.nmsu.edu/" target="_blank" rel="noopener noreferrer" className="ml-auto">
-                                    <Button variant="outlined" className="flex gap-2">
-                                        <LinkIcon />
-                                        NMSU Esports
-                                    </Button>
-                                </a>
-                            </div>
+                        panel: <TabPanels.EsportsTabPanel />
                     },
                     {
                         label: 'Anime Club',
                         index: 1,
-                        panel:  
-                            <div className="flex flex-wrap gap-4">
-                                <p>
-                                    <img 
-                                        src={process.env.PUBLIC_URL + '/assets/images/anime_night.jpg'} 
-                                        alt="Anime Night!"
-                                        className="w-64 object-cover sm:float-left justify-self-center pb-4 sm:pb-0"
-                                    />
-                                    I've always been a fan of anime, so when I found out that there was an anime club at NMSU, I was excited to join.
-                                     I was a member of <i><strong>Anime Night!</strong></i> for 2 years, and I was able to attend and help run events, such as the annual Anime Expo and Video Game Tournaments at the NMSU community center.
-                                     During my senior year, I was voted in as the club's president, where I was responsible for planning weekly meetings, and managing the club's assets and budget.
-                                     This involved a lot of planning, organization, and communication with the other club members, which helped me develop my leadership and organizational skills.
-                                     While it hasn't been active since I graduated, I still keep in touch with some of the other members, and we still get together to watch anime and play video games.
-                                </p>
-                            </div>
+                        panel: <TabPanels.WeebTabPanel />
                     }
                 ]} name="Extracurricular-activities" />
             </Card>
@@ -334,21 +266,27 @@ function Home() {
 
             <Card >
                 <h3>Video Games</h3>
+                <p>
+                    I've been playing video games since I was 3 years old, when my parents bought me a Nintendo 64.
+                    The unparalleled immersion that video games can accomplish is what makes them such a unique form of art.
+                    I've enjoyed video games both competitively and casually my entire life.
+                    I appreciate all that there is to gain from video games, whether that be immersive storytelling, the honing of motor skills, development of multitasking abilities, or the joy of competition.
+                </p>
                 <ScrollableTabs tabs={[
                     {
                         label: 'Competitive',
                         index: 0,
-                        panel: <div>Competitive content</div>
+                        panel: <TabPanels.VGCompTabPanel />
                     },
                     {
                         label: 'Casual',
                         index: 1,
-                        panel: <div>Casual content</div>
+                        panel: <TabPanels.VGCasualTabPanel />
                     },
                     {
                         label: 'Coaching',
                         index: 2,
-                        panel: <div>Coaching content</div>
+                        panel: <TabPanels.VGCoachingTabPanel />
                     }
                 ]} name="video-games" />
             </Card>
@@ -359,17 +297,17 @@ function Home() {
                     {
                         label: 'Golf',
                         index: 0,
-                        panel: <div>Golf content</div>
+                        panel: <TabPanels.GolfTabPanel />
                     },
                     {
                         label: 'Bowling',
                         index: 1,
-                        panel: <div>Bowling content</div>
+                        panel: <TabPanels.BowlingTabPanel />
                     },
                     {
                         label: 'Baseball',
                         index: 2,
-                        panel: <div>Baseball content</div>
+                        panel: <TabPanels.BaseBallTabPanel />
                     }
                 ]} name="sports" />
             </Card>
