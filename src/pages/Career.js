@@ -86,7 +86,7 @@ function Career() {
                     <a href="https://www.gm.com/" target="_blank" rel="noopener noreferrer" className="hover:scale-[1.05] transition-all duration-[120ms] flex justify-center">
                         <img 
                             alt="General Motors Logo"
-                            src={process.env.PUBLIC_URL + '/assets/images/GM-Logo-2021.png'} 
+                            src={process.env.PUBLIC_URL + '/assets/images/GM-logo-2021.png'} 
                             className="w-24 p-4 bg-[#11365f] rounded-2xl"
                         />
                     </a>

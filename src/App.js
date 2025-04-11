@@ -55,6 +55,7 @@ function AppContent() {
           <Route path="/career" element={<Career />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/bits-and-bobs" element={<TestPage />} />
+          <Route path="/test" element={<TestPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>

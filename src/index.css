@@ -3,6 +3,26 @@
 @import '@fontsource/roboto/500.css';
 @import '@fontsource/roboto/700.css';
 
+@font-face {
+  font-family: 'Expose';
+  src: url('../public/assets/fonts/Expose-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Persona 5 Main';
+  src: url('../public/assets/fonts/Persona5main.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Persona 5 Menu';
+  src: url('../public/assets/fonts/Persona5MenuFontPrototype-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Earwig';
+  src: url('../public/assets/fonts/earwig-factory-rg.otf') format('opentype');
+}
+
 #root {
   display: flex;
   flex-direction: column;
