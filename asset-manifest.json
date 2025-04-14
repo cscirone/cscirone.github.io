@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.23a3ac72.css",
-    "main.js": "/static/js/main.a127a718.js",
+    "main.css": "/static/css/main.49d4b3ea.css",
+    "main.js": "/static/js/main.94b06431.js",
     "static/js/453.bed16b59.chunk.js": "/static/js/453.bed16b59.chunk.js",
     "static/media/Expose-Regular.otf": "/static/media/Expose-Regular.ffb725c3d77507a79c30.otf",
+    "static/media/earwig-factory-rg.otf": "/static/media/earwig-factory-rg.f7475fefb9489b923469.otf",
+    "static/media/Persona5MenuFontPrototype-Regular.otf": "/static/media/Persona5MenuFontPrototype-Regular.eaf9adfa13ad3376ffd6.otf",
     "static/media/roboto-latin-700-normal.woff2": "/static/media/roboto-latin-700-normal.c4d6cab43bec89049809.woff2",
     "static/media/roboto-latin-500-normal.woff2": "/static/media/roboto-latin-500-normal.599f66a60bdf974e578e.woff2",
     "static/media/roboto-latin-300-normal.woff2": "/static/media/roboto-latin-300-normal.db56943a88e4852343ae.woff2",
@@ -60,6 +62,7 @@
     "static/media/roboto-vietnamese-400-normal.woff2": "/static/media/roboto-vietnamese-400-normal.b1b8baa94fbcaa57d098.woff2",
     "static/media/roboto-vietnamese-300-normal.woff2": "/static/media/roboto-vietnamese-300-normal.6f0bf63e956c09377ef8.woff2",
     "static/media/roboto-vietnamese-500-normal.woff2": "/static/media/roboto-vietnamese-500-normal.148734d63bd96c6e964f.woff2",
+    "static/media/Persona5main.ttf": "/static/media/Persona5main.a9e06ec8892494b38ba3.ttf",
     "static/media/roboto-greek-500-normal.woff": "/static/media/roboto-greek-500-normal.4fe733bc436afc295c24.woff",
     "static/media/roboto-greek-700-normal.woff": "/static/media/roboto-greek-700-normal.d23e03cf87ba44e5af6f.woff",
     "static/media/roboto-greek-300-normal.woff": "/static/media/roboto-greek-300-normal.8300b541aa89b8301a6f.woff",
@@ -77,12 +80,12 @@
     "static/media/roboto-greek-ext-500-normal.woff": "/static/media/roboto-greek-ext-500-normal.1964239c2800b6bd7e39.woff",
     "static/media/roboto-greek-ext-300-normal.woff": "/static/media/roboto-greek-ext-300-normal.60729cafbded24073dfb.woff",
     "index.html": "/index.html",
-    "main.23a3ac72.css.map": "/static/css/main.23a3ac72.css.map",
-    "main.a127a718.js.map": "/static/js/main.a127a718.js.map",
+    "main.49d4b3ea.css.map": "/static/css/main.49d4b3ea.css.map",
+    "main.94b06431.js.map": "/static/js/main.94b06431.js.map",
     "453.bed16b59.chunk.js.map": "/static/js/453.bed16b59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23a3ac72.css",
-    "static/js/main.a127a718.js"
+    "static/css/main.49d4b3ea.css",
+    "static/js/main.94b06431.js"
   ]
 }
