@@ -51,16 +51,30 @@
                 height: 100%;
             }
 
-            &.cyan-fill {
+            &.secondary-fill {
                 mix-blend-mode: screen;
                 animation-delay: 0.04s;
                 animation-duration: .4s;
+
+                svg {
+                    polygon {
+                        fill: #00ffff;
+                        /*fill: var(--mui-palette-secondary-main);*/
+                    }
+                }
             }
 
-            &.red-fill {
+            &.primary-fill {
                 opacity: .8;
                 animation-delay: 0.08s;
                 animation-duration: .45s;
+
+                svg {
+                    polygon {
+                        fill: #ff0000;
+                        /*fill: var(--mui-palette-primary-main);*/
+                    }
+                }
             }
         }
     }
@@ -71,7 +85,7 @@
             display: flex;
             transform: rotate(-10deg);
 
-            .shape.cyan-fill {
+            .shape.secondary-fill {
                 transform: scale(3, .2);
             }
         }
