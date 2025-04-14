@@ -1,0 +1,28 @@
+.swiper {
+    --swiper-padding: 2.5rem;
+
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-inline: var(--swiper-padding);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--mui-palette-primary-main);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute !important;
+    height: fit-content;
+    top: calc(50% - 40px);
+
+    &::after {
+        display: none;
+    }
+
+    .swiper-button-icon {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+

@@ -32,7 +32,7 @@ function Home() {
                         </div>
 
                         <div className="flex">
-                            <Link to="/contact">
+                            <Link to="/contact" onClick={() =>{global.window.scrollTo({ top: 0, behavior: 'smooth' });}}>
                                 <Button variant="outlined" className="flex gap-2">
                                     <EmailIcon />
                                     Contact Me
@@ -60,7 +60,7 @@ function Home() {
                 </p>
 
                 <Button variant="contained" className="w-fit self-end">
-                    <Link to="/career">Learn about my career experience!</Link>
+                    <Link to="/career" onClick={() =>{global.window.scrollTo({ top: 0, behavior: 'smooth' });}}>Learn about my career experience!</Link>
                 </Button>
             </Card>
 

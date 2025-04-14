@@ -1,13 +1,5 @@
 .persona-button {
-    background-color: transparent;
     position: relative;
-    border: none;
-    font-family: sans-serif;
-    font-size: 1.2rem;
-    cursor: pointer;
-    outline: none;
-
-    
 
     span {
         mix-blend-mode: hard-light;

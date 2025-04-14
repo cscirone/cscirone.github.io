@@ -1,16 +1,42 @@
+import { Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
+import './PersonaButton.css';
+
+const StyledButton = styled(Button)(({ theme }) => ({
+    background: 'transparent',
+    border: 'none',
+    fontFamily: 'Earwig, sans-serif',
+    fontSize: '2em',
+    cursor: 'pointer',
+    outline: 'none',
+    padding: 0,
+    minWidth: 'auto',
+    textTransform: 'none',
+    '&:hover': {
+        background: 'transparent',
+    },
+    '& .MuiButton-startIcon': {
+        margin: 0,
+    },
+    '& .MuiButton-endIcon': {
+        margin: 0,
+    },
+}));
+
 export default function PersonaButton({
     children,
     tiltDirection,
     className = '',
-    onClick
+    onClick,
+    ...props
 }) {
     return (
-        <button
+        <StyledButton
             className={`persona-button persona-button-${tiltDirection} ${className}`}
             onClick={onClick}
-        >
-            
-
+            {...props}
+        >     
             <div className="shape-wrapper">
                 <div className="shape red-fill jelly">
                     <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
@@ -26,6 +52,6 @@ export default function PersonaButton({
             </div>
 
             <span>{children}</span>
-        </button>
+        </StyledButton>
     );
 };

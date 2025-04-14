@@ -10,7 +10,7 @@ function GolfTabPanel() {
                 Golf is a very relaxing sport, all about keeping your head clear and you mind focused.
                 I golf once a week, and I am steadily improving.
                 I am proud to have worked my way up to being a consistent bogey golfer.
-                Lately my favorite course to play is Greenfield Lake Greens in Chandler, Arizona.
+                Lately my favorite course to play is <a href="https://golfgilbert.com/" target="_blank" rel="noopener noreferrer">Greenfield Lake Greens</a> in Gilbert, Arizona.
             </p>
         </TabPanelContent>
     );

@@ -1,6 +1,11 @@
 import JdoodleEmbed from '../components/jDoodleEmbed/JdoodleEmbed';
 
 import PersonaButton from '../components/customButtons/PersonaButton';
+import RandomShapes from '../components/randomShapes/RandomShapes';
+
+import SwiperNav from '../components/swiper/SwiperNav';
+
+import TabPanels from '../components/TabPanelContent/TabPanels';
 
 function TestPage() {
     return (
@@ -12,6 +17,10 @@ function TestPage() {
             <PersonaButton className="w-fit" tiltDirection="left">
                 Index
             </PersonaButton>
+
+            <SwiperNav cards={[<TabPanels.DesignSystemsTabPanel />, <TabPanels.CSSTabPanel />, <TabPanels.JavaScriptTabPanel />, <TabPanels.ReactTabPanel />]} />
+
+            <RandomShapes />
         </div>
     );
 }

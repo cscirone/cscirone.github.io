@@ -1,12 +1,19 @@
-import Card from '../components/card/Card';
-import { LinkedInButton } from '../components/customButtons/SocialMediaButtons';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import RecommendationCard from '../components/card/RecommendationCard';
 
 function Recommendations() {
     return (
         <>
             <h1>Recommendations</h1>
+
+            <RecommendationCard
+                name="Noelle Creamer"
+                title="Chief People Officer at StrongMind"
+                linkedinUrl="https://www.linkedin.com/in/noelle-c-396602308/"
+                imageUrl="https://media.licdn.com/dms/image/v2/D5603AQH2nl4JsVl0nQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715107432030?e=1750291200&v=beta&t=IF4J4PIUsKzOKkO6EB-cb3S7BummSDIW_0rVVvS9W-E"
+                paragraphs={[
+                    `CJ was an amazing contributor to StrongMind! He worked on two of our most important tools: Course Builder and Prompt Studio, and played a key role in shaping intuitive, user-friendly experiences for our teams. He brought fresh perspective, attention to detail, and a strong collaborative spirit to everything he touched. CJ isn’t just technically sharp...he’s thoughtful, motivated, and always focused on building things that make people’s work better 🙌 Any team or company would be lucky to have his kind of talent and work ethic. Wishing you all the best in what’s next, CJ....you’ve got a bright path ahead and we will miss you!`
+                ]}
+            />
 
             <RecommendationCard
                 name="Ray Villaraza"

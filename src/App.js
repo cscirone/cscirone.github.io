@@ -14,6 +14,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 //import Navbar from './components/navbar/Navbar';
 import DrawerAppBar from './components/drawerAppBar/DrawerAppBar';
 
+import RandomShapes from './components/randomShapes/RandomShapes';
 
 const theme = createTheme({
   palette: {
@@ -26,11 +27,14 @@ const theme = createTheme({
     },
     background: {
       default: '#f4f4f5',
+      //default: '#18181b90'
+      //default: '#0a0a0a'
     },
     success: {
       main: '#22c55e',
     },
   },
+  cssVariables: true,
 });
 
 
@@ -50,6 +54,7 @@ function AppContent() {
       <DrawerAppBar />
 
       <main className="px-4 py-2 sm:px-10 sm:py-4 flex flex-col gap-4">
+        {/*<RandomShapes  className="!fixed top-0 left-0 w-full h-[100vh] z-[-1]"/>*/}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/career" element={<Career />} />
